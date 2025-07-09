@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 function FooterBrand() {
   return (
     <div className='col-span-1 md:col-span-2'>

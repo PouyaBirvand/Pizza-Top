@@ -6,7 +6,7 @@ function ContactInfo() {
     },
     {
       icon: 'https://cdn.lordicon.com/rhvddzym.json',
-      text: 'hello@emeraldslice.com',
+      text: 'hello@pizzatop.com',
     },
     {
       icon: 'https://cdn.lordicon.com/surcxhka.json',

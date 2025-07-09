@@ -14,7 +14,7 @@ const ReviewHeader = () => {
         Customer Reviews
       </h1>
       <p className='mx-auto max-w-3xl text-xl text-slate-600 dark:text-slate-300'>
-        See what our customers are saying about their Emerald Slice experience
+        See what our customers are saying about their Pizza Top experience
       </p>
     </div>
   );
