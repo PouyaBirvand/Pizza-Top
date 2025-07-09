@@ -4,7 +4,7 @@ import FeatureCard from './FeatureCard';
 function FeaturesSection() {
   return (
     <section>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className='grid grid-cols-1 gap-6 md:grid-cols-3'>
         {FEATURES_DATA.map((feature) => (
           <FeatureCard
             key={feature.id}

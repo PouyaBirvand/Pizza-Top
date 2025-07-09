@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { deleteItem } from '../cartSlice';
 import IconButton from './ui/IconButton';
 
-
 const DeleteItem = memo(({ pizzaId }) => {
   const dispatch = useDispatch();
 
@@ -13,11 +12,11 @@ const DeleteItem = memo(({ pizzaId }) => {
 
   return (
     <IconButton
-      type="danger"
+      type='danger'
       onClick={handleDelete}
-      icon="https://cdn.lordicon.com/skkahier.json"
+      icon='https://cdn.lordicon.com/skkahier.json'
       iconProps={{ colors: 'primary:#ffffff,secondary:#ffffff' }}
-      aria-label="Delete item from cart"
+      aria-label='Delete item from cart'
     >
       Delete
     </IconButton>

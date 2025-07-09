@@ -3,8 +3,8 @@ import { useFAQ } from '../hooks/useFAQ';
 import FAQItem from './FAQItem';
 
 const EmptyState = () => (
-  <div className="text-center py-12">
-    <p className="text-slate-600 dark:text-slate-400 text-lg">
+  <div className='py-12 text-center'>
+    <p className='text-lg text-slate-600 dark:text-slate-400'>
       No questions found in this category.
     </p>
   </div>
@@ -18,7 +18,7 @@ const FAQList = () => {
   }
 
   return (
-    <div className="space-y-4">
+    <div className='space-y-4'>
       {filteredFaqs.map((faq) => (
         <FAQItem key={faq.id} faq={faq} />
       ))}

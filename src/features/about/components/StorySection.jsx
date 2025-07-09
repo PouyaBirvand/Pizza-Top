@@ -3,14 +3,13 @@ import Section from './ui/Section';
 import Card from './ui/Card';
 import LordIcon from './ui/LordIcon';
 
-
 const StorySection = memo(({ storyData, qualityData }) => {
   return (
     <Section>
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className='grid items-center gap-12 md:grid-cols-2'>
         {/* Story Card */}
-        <Card variant="elevated">
-          <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-200 mb-6 flex items-center">
+        <Card variant='elevated'>
+          <h2 className='mb-6 flex items-center text-3xl font-bold text-slate-800 dark:text-slate-200'>
             <LordIcon
               src={storyData.icon.src}
               trigger={storyData.icon.trigger}
@@ -20,9 +19,9 @@ const StorySection = memo(({ storyData, qualityData }) => {
             />
             {storyData.title}
           </h2>
-          
+
           {storyData.paragraphs.map((paragraph, index) => (
-            <p 
+            <p
               key={index}
               className={`text-slate-600 dark:text-slate-400 ${
                 index < storyData.paragraphs.length - 1 ? 'mb-4' : ''
@@ -34,9 +33,9 @@ const StorySection = memo(({ storyData, qualityData }) => {
         </Card>
 
         {/* Quality Card */}
-        <div className="relative">
-          <Card variant="gradient">
-            <div className="bg-white dark:bg-slate-800 rounded-3xl p-8 h-full">
+        <div className='relative'>
+          <Card variant='gradient'>
+            <div className='h-full rounded-3xl bg-white p-8 dark:bg-slate-800'>
               <LordIcon
                 src={qualityData.icon.src}
                 trigger={qualityData.icon.trigger}
@@ -45,12 +44,12 @@ const StorySection = memo(({ storyData, qualityData }) => {
                 size={qualityData.icon.size}
                 style={{ margin: '0 auto 24px' }}
               />
-              
-              <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200 text-center mb-4">
+
+              <h3 className='mb-4 text-center text-2xl font-bold text-slate-800 dark:text-slate-200'>
                 {qualityData.title}
               </h3>
-              
-              <p className="text-slate-600 dark:text-slate-400 text-center">
+
+              <p className='text-center text-slate-600 dark:text-slate-400'>
                 {qualityData.description}
               </p>
             </div>

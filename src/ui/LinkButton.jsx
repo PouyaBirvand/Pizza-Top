@@ -1,10 +1,10 @@
-
 import { Link, useNavigate } from 'react-router-dom';
 
 function LinkButton({ children, to }) {
   const navigate = useNavigate();
-  
-  const className = 'inline-flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 font-medium transition-colors duration-200 hover:underline';
+
+  const className =
+    'inline-flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 font-medium transition-colors duration-200 hover:underline';
 
   if (to === '-1')
     return (

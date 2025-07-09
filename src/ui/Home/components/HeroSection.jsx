@@ -3,7 +3,7 @@ import HeroText from './HeroText';
 
 function HeroSection() {
   return (
-    <section className="mb-12">
+    <section className='mb-12'>
       <HeroIcon />
       <HeroText />
     </section>

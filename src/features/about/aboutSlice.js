@@ -5,7 +5,7 @@ const initialState = {
     customers: 50000,
     pizzasDelivered: 100000,
     averageRating: 4.9,
-    yearsOfExcellence: 3
+    yearsOfExcellence: 3,
   },
 };
 
@@ -16,7 +16,7 @@ const aboutSlice = createSlice({
     updateStats: (state, action) => {
       state.stats = { ...state.stats, ...action.payload };
     },
-  }
+  },
 });
 
 export const { updateStats, setLoading, setError } = aboutSlice.actions;

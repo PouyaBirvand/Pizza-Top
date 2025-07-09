@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux';
-import { 
-  getCart, 
-  getTotalCartPrice, 
-  getTotalCartQuantity, 
+import {
+  getCart,
+  getTotalCartPrice,
+  getTotalCartQuantity,
   getIsCartEmpty,
-  getCartItemsCount 
+  getCartItemsCount,
 } from '../cartSlice';
 
 export const useCart = () => {

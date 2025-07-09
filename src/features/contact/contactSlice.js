@@ -6,15 +6,15 @@ export const submitContactForm = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       // Simulate API call - replace with actual API endpoint
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
       // Here you would make actual API call
       // const response = await fetch('/api/contact', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(formData)
       // });
-      
+
       return { success: true, message: 'Message sent successfully!' };
     } catch (error) {
       return rejectWithValue(error.message);
@@ -27,12 +27,12 @@ const initialState = {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   },
   isSubmitting: false,
   submitted: false,
   error: null,
-  successMessage: null
+  successMessage: null,
 };
 
 const contactSlice = createSlice({
@@ -53,7 +53,7 @@ const contactSlice = createSlice({
       state.submitted = false;
       state.successMessage = null;
       state.error = null;
-    }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -71,8 +71,9 @@ const contactSlice = createSlice({
         state.isSubmitting = false;
         state.error = action.payload;
       });
-  }
+  },
 });
 
-export const { updateFormField, resetForm, clearSubmissionStatus } = contactSlice.actions;
+export const { updateFormField, resetForm, clearSubmissionStatus } =
+  contactSlice.actions;
 export default contactSlice.reducer;

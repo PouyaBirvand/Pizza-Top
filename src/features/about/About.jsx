@@ -12,7 +12,7 @@ const About = memo(() => {
   const { stats } = useAbout();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12">
+    <div className='mx-auto max-w-6xl px-4 py-12'>
       <AboutHero data={hero} />
       <StorySection storyData={story} qualityData={quality} />
       <ValuesSection values={values} />

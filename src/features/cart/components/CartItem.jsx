@@ -9,16 +9,9 @@ const CartItem = memo(({ item }) => {
   const currentQuantity = useSelector(getCurrentQuantityById(pizzaId));
 
   return (
-    <div className="p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-      <CartItemInfo
-        name={name}
-        quantity={quantity}
-        totalPrice={totalPrice}
-      />
-      <CartItemActions
-        pizzaId={pizzaId}
-        currentQuantity={currentQuantity}
-      />
+    <div className='flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between'>
+      <CartItemInfo name={name} quantity={quantity} totalPrice={totalPrice} />
+      <CartItemActions pizzaId={pizzaId} currentQuantity={currentQuantity} />
     </div>
   );
 });

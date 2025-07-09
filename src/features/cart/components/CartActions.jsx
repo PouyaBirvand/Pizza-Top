@@ -11,20 +11,20 @@ const CartActions = memo(() => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <div className='flex flex-col justify-center gap-4 sm:flex-row'>
       <IconButton
-        to="/order/new"
-        type="primary"
-        icon="https://cdn.lordicon.com/jnikqyih.json"
+        to='/order/new'
+        type='primary'
+        icon='https://cdn.lordicon.com/jnikqyih.json'
         iconProps={{ colors: 'primary:#ffffff,secondary:#ffffff' }}
       >
         Order Pizzas
       </IconButton>
-      
+
       <IconButton
-        type="secondary"
+        type='secondary'
         onClick={handleClearCart}
-        icon="https://cdn.lordicon.com/skkahier.json"
+        icon='https://cdn.lordicon.com/skkahier.json'
       >
         Clear Cart
       </IconButton>

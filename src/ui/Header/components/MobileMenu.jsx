@@ -31,27 +31,31 @@ function MobileMenu({ isOpen, onClose }) {
   return (
     <>
       {/* Backdrop */}
-      <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+      <div
+        className='fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden'
         onClick={onClose}
-        aria-hidden="true"
+        aria-hidden='true'
       />
-      
+
       {/* Mobile Menu Panel */}
-      <div className={`fixed top-16 left-0 right-0 bg-white dark:bg-slate-900 border-b border-emerald-200/50 dark:border-emerald-800/50 z-50 lg:hidden transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+      <div
+        className={`fixed left-0 right-0 top-16 z-50 transform border-b border-emerald-200/50 bg-white transition-transform duration-300 ease-in-out dark:border-emerald-800/50 dark:bg-slate-900 lg:hidden ${
+          isOpen ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
+        <div className='mx-auto max-w-7xl px-4 py-6 sm:px-6'>
           {/* Search Section */}
-          <div className="mb-6 sm:hidden">
+          <div className='mb-6 sm:hidden'>
             <SearchOrder />
           </div>
-          
+
           {/* Navigation */}
-          <div className="mb-6">
+          <div className='mb-6'>
             <Navigation isMobile={true} onItemClick={onClose} />
           </div>
-          
+
           {/* User Section */}
-          <div className="pt-4 border-t border-emerald-200/50 dark:border-emerald-800/50 md:hidden">
+          <div className='border-t border-emerald-200/50 pt-4 dark:border-emerald-800/50 md:hidden'>
             <Username />
           </div>
         </div>

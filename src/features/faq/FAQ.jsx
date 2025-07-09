@@ -7,7 +7,7 @@ import ContactSection from './components/ContactSection';
 
 const FAQ = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
+    <div className='mx-auto max-w-6xl px-4 py-12'>
       <FAQHeader />
       <CategoryFilter />
       <FAQControls />

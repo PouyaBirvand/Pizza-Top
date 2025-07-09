@@ -5,7 +5,7 @@ import QuickActions from './QuickActions';
 
 const ContactSidebar = () => {
   return (
-    <div className="space-y-8">
+    <div className='space-y-8'>
       <ContactInfo />
       <BusinessHours />
       <QuickActions />

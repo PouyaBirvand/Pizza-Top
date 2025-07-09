@@ -19,18 +19,18 @@ function Header() {
   };
 
   return (
-    <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-emerald-200/50 dark:border-emerald-800/50 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <header className='sticky top-0 z-50 border-b border-emerald-200/50 bg-white/80 backdrop-blur-md dark:border-emerald-800/50 dark:bg-slate-900/80'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
+        <div className='flex h-16 items-center justify-between'>
           <Logo />
-          
+
           {/* Desktop Navigation */}
-          <div className="hidden lg:block">
+          <div className='hidden lg:block'>
             <Navigation />
           </div>
 
           {/* Right Section */}
-          <RightSection 
+          <RightSection
             totalCartQuantity={totalCartQuantity}
             onMobileMenuToggle={toggleMobileMenu}
             isMobileMenuOpen={isMobileMenuOpen}
@@ -39,8 +39,8 @@ function Header() {
       </div>
 
       {/* Mobile Menu */}
-      <MobileMenu 
-        isOpen={isMobileMenuOpen} 
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
         onClose={closeMobileMenu}
         totalCartQuantity={totalCartQuantity}
       />

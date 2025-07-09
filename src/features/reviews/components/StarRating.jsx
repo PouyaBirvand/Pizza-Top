@@ -5,12 +5,12 @@ const StarRating = ({
   maxStars = 5,
   size = 'md',
   readonly = true,
-  onChange
+  onChange,
 }) => {
   const sizeClasses = {
     sm: 'text-sm',
     md: 'text-lg',
-    lg: 'text-xl'
+    lg: 'text-xl',
   };
 
   const handleStarClick = (starRating) => {
@@ -20,7 +20,7 @@ const StarRating = ({
   };
 
   return (
-    <div className="flex">
+    <div className='flex'>
       {Array.from({ length: maxStars }, (_, i) => (
         <span
           key={i}

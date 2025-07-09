@@ -8,7 +8,7 @@ const Menu = () => {
   const menu = useLoaderData();
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className='mx-auto max-w-6xl px-4 py-8'>
       <MenuHeader />
       <MenuGrid menuItems={menu} />
     </div>

@@ -16,22 +16,22 @@ const UpdateItemQuantity = memo(({ pizzaId, currentQuantity }) => {
   }, [dispatch, pizzaId]);
 
   return (
-    <div className="flex items-center space-x-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-2">
+    <div className='flex items-center space-x-3 rounded-xl bg-emerald-50 p-2 dark:bg-emerald-900/20'>
       <QuantityButton
-        type="decrease"
+        type='decrease'
         onClick={handleDecrease}
         disabled={currentQuantity <= 1}
-        iconSrc="https://cdn.lordicon.com/rmkahxvq.json"
-        ariaLabel="Decrease quantity"
+        iconSrc='https://cdn.lordicon.com/rmkahxvq.json'
+        ariaLabel='Decrease quantity'
       />
-      
+
       <QuantityDisplay quantity={currentQuantity} />
-      
+
       <QuantityButton
-        type="increase"
+        type='increase'
         onClick={handleIncrease}
-        iconSrc="https://cdn.lordicon.com/jqeuwnmb.json"
-        ariaLabel="Increase quantity"
+        iconSrc='https://cdn.lordicon.com/jqeuwnmb.json'
+        ariaLabel='Increase quantity'
       />
     </div>
   );

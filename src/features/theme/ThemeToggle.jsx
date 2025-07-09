@@ -7,13 +7,13 @@ const THEME_CONFIG = {
   dark: {
     icon: SunIcon,
     label: 'Switch to light mode',
-    iconColor: 'text-yellow-500'
+    iconColor: 'text-yellow-500',
   },
   light: {
     icon: MoonIcon,
     label: 'Switch to dark mode',
-    iconColor: 'text-slate-700'
-  }
+    iconColor: 'text-slate-700',
+  },
 };
 
 const ThemeToggle = memo(() => {
@@ -24,12 +24,12 @@ const ThemeToggle = memo(() => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 hover:bg-emerald-200 dark:hover:bg-emerald-900/50 transition-all duration-200 transform hover:scale-110"
-      aria-label="Toggle theme"
+      className='transform rounded-xl bg-emerald-100 p-2 transition-all duration-200 hover:scale-110 hover:bg-emerald-200 dark:bg-emerald-900/30 dark:hover:bg-emerald-900/50'
+      aria-label='Toggle theme'
       title={config.label}
-      type="button"
+      type='button'
     >
-      <IconComponent className={`w-6 h-6 ${config.iconColor}`} />
+      <IconComponent className={`h-6 w-6 ${config.iconColor}`} />
     </button>
   );
 });

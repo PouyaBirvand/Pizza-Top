@@ -15,7 +15,7 @@ const Cart = memo(() => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className='mx-auto max-w-4xl px-4 py-8'>
       <CartHeader username={username} />
       <CartItemsList items={cart} />
       <CartActions />

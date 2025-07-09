@@ -1,20 +1,20 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { 
-  selectFaqs, 
-  selectCategories, 
-  selectActiveCategory, 
-  selectOpenItems, 
+import {
+  selectFaqs,
+  selectCategories,
+  selectActiveCategory,
+  selectOpenItems,
   selectFilteredFaqs,
   selectIsItemOpen,
-  setActiveCategory, 
-  toggleFaqItem, 
-  closeAllItems, 
-  openAllItems 
+  setActiveCategory,
+  toggleFaqItem,
+  closeAllItems,
+  openAllItems,
 } from '../faqSlice';
 
 export const useFAQ = () => {
   const dispatch = useDispatch();
-  
+
   const faqs = useSelector(selectFaqs);
   const categories = useSelector(selectCategories);
   const activeCategory = useSelector(selectActiveCategory);
@@ -26,7 +26,7 @@ export const useFAQ = () => {
     toggleFaqItem: (itemId) => dispatch(toggleFaqItem(itemId)),
     closeAllItems: () => dispatch(closeAllItems()),
     openAllItems: () => dispatch(openAllItems()),
-    isItemOpen: (itemId) => openItems.includes(itemId)
+    isItemOpen: (itemId) => openItems.includes(itemId),
   };
 
   return {
@@ -35,15 +35,15 @@ export const useFAQ = () => {
     activeCategory,
     openItems,
     filteredFaqs,
-    ...actions
+    ...actions,
   };
 };
 
 export const useFAQItem = (itemId) => {
   const dispatch = useDispatch();
-  const isOpen = useSelector(state => selectIsItemOpen(state, itemId));
-  
+  const isOpen = useSelector((state) => selectIsItemOpen(state, itemId));
+
   const toggle = () => dispatch(toggleFaqItem(itemId));
-  
+
   return { isOpen, toggle };
 };

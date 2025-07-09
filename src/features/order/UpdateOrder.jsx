@@ -6,15 +6,15 @@ function UpdateOrder({ order }) {
   const fetcher = useFetcher();
 
   return (
-    <div className="text-center">
-      <fetcher.Form method="PATCH" className="inline-block">
-        <Button type="primary">
+    <div className='text-center'>
+      <fetcher.Form method='PATCH' className='inline-block'>
+        <Button type='primary'>
           {fetcher.state === 'submitting' ? (
             <>
               <lord-icon
-                src="https://cdn.lordicon.com/xjovhxra.json"
-                trigger="loop"
-                colors="primary:#ffffff,secondary:#ffffff"
+                src='https://cdn.lordicon.com/xjovhxra.json'
+                trigger='loop'
+                colors='primary:#ffffff,secondary:#ffffff'
                 style={{ width: '20px', height: '20px', marginRight: '8px' }}
               />
               Updating...
@@ -22,9 +22,9 @@ function UpdateOrder({ order }) {
           ) : (
             <>
               <lord-icon
-                src="https://cdn.lordicon.com/yqzmiobz.json"
-                trigger="hover"
-                colors="primary:#ffffff,secondary:#ffffff"
+                src='https://cdn.lordicon.com/yqzmiobz.json'
+                trigger='hover'
+                colors='primary:#ffffff,secondary:#ffffff'
                 style={{ width: '20px', height: '20px', marginRight: '8px' }}
               />
               Make Priority

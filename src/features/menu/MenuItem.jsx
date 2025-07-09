@@ -11,17 +11,13 @@ const MenuItem = ({ pizza }) => {
 
   return (
     <MenuItemCard>
-      <PizzaImage 
-        imageUrl={imageUrl} 
-        name={name} 
-        soldOut={soldOut} 
-      />
+      <PizzaImage imageUrl={imageUrl} name={name} soldOut={soldOut} />
       <PriceBadge price={unitPrice} />
-      
-      <div className="p-6">
+
+      <div className='p-6'>
         <PizzaInfo name={name} ingredients={ingredients} />
-        
-        <div className="flex items-center justify-between">
+
+        <div className='flex items-center justify-between'>
           <MenuItemActions
             isInCart={isInCart}
             soldOut={soldOut}
@@ -36,7 +32,7 @@ const MenuItem = ({ pizza }) => {
 };
 
 const MenuItemCard = ({ children }) => (
-  <div className="group relative bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm rounded-2xl border border-emerald-200/50 dark:border-emerald-800/50 shadow-lg shadow-emerald-500/10 hover:shadow-xl hover:shadow-emerald-500/20 transition-all duration-300 overflow-hidden">
+  <div className='group relative overflow-hidden rounded-2xl border border-emerald-200/50 bg-white/70 shadow-lg shadow-emerald-500/10 backdrop-blur-sm transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/20 dark:border-emerald-800/50 dark:bg-slate-800/70'>
     {children}
   </div>
 );

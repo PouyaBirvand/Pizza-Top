@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { 
-  setTheme, 
-  toggleTheme, 
+import {
+  setTheme,
+  toggleTheme,
   initializeTheme,
   selectCurrentTheme,
-  selectIsDarkMode 
+  selectIsDarkMode,
 } from '../themeSlice';
 
 export const useTheme = () => {

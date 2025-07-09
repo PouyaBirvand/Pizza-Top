@@ -13,10 +13,11 @@ const cartSlice = createSlice({
       const existingItem = state.cart.find(
         (item) => item.pizzaId === action.payload.pizzaId
       );
-      
+
       if (existingItem) {
         existingItem.quantity += action.payload.quantity;
-        existingItem.totalPrice = existingItem.quantity * existingItem.unitPrice;
+        existingItem.totalPrice =
+          existingItem.quantity * existingItem.unitPrice;
       } else {
         state.cart.push(action.payload);
       }
@@ -78,14 +79,12 @@ export const getCart = createSelector(
   (cartState) => cartState.cart
 );
 
-export const getTotalCartQuantity = createSelector(
-  [getCart],
-  (cart) => cart.reduce((sum, item) => sum + item.quantity, 0)
+export const getTotalCartQuantity = createSelector([getCart], (cart) =>
+  cart.reduce((sum, item) => sum + item.quantity, 0)
 );
 
-export const getTotalCartPrice = createSelector(
-  [getCart],
-  (cart) => cart.reduce((sum, item) => sum + item.totalPrice, 0)
+export const getTotalCartPrice = createSelector([getCart], (cart) =>
+  cart.reduce((sum, item) => sum + item.totalPrice, 0)
 );
 
 export const getCartItemsCount = createSelector(
@@ -100,10 +99,7 @@ export const getCurrentQuantityById = (id) =>
   );
 
 export const getCartItem = (id) =>
-  createSelector(
-    [getCart],
-    (cart) => cart.find((item) => item.pizzaId === id)
-  );
+  createSelector([getCart], (cart) => cart.find((item) => item.pizzaId === id));
 
 export const getIsCartEmpty = createSelector(
   [getCart],

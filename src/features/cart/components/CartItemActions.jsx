@@ -4,11 +4,8 @@ import DeleteItem from './DeleteItem';
 
 const CartItemActions = memo(({ pizzaId, currentQuantity }) => {
   return (
-    <div className="flex items-center space-x-4">
-      <UpdateItemQuantity
-        pizzaId={pizzaId}
-        currentQuantity={currentQuantity}
-      />
+    <div className='flex items-center space-x-4'>
+      <UpdateItemQuantity pizzaId={pizzaId} currentQuantity={currentQuantity} />
       <DeleteItem pizzaId={pizzaId} />
     </div>
   );

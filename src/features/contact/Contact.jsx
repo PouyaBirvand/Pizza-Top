@@ -5,10 +5,10 @@ import ContactSidebar from './components/ContactSidebar';
 
 const Contact = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
+    <div className='mx-auto max-w-6xl px-4 py-12'>
       <ContactHeader />
-      
-      <div className="grid lg:grid-cols-2 gap-12">
+
+      <div className='grid gap-12 lg:grid-cols-2'>
         <ContactForm />
         <ContactSidebar />
       </div>

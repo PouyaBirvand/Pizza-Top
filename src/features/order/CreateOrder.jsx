@@ -10,7 +10,9 @@ import { fetchAddress } from '../user/userSlice';
 import { clearCart, getCart, getTotalCartPrice } from '../cart/cartSlice';
 
 const isValidPhone = (str) =>
-  /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(str);
+  /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(
+    str
+  );
 
 function CreateOrder() {
   const [withPriority, setWithPriority] = useState(false);
@@ -34,70 +36,70 @@ function CreateOrder() {
   if (!cart.length) return <EmptyCart />;
 
   return (
-    <div className="max-w-2xl mx-auto px-4 py-8">
+    <div className='mx-auto max-w-2xl px-4 py-8'>
       {/* Header */}
-      <div className="text-center mb-8">
+      <div className='mb-8 text-center'>
         <lord-icon
-          src="https://cdn.lordicon.com/jnikqyih.json"
-          trigger="loop"
-          delay="2000"
-          colors="primary:#10b981,secondary:#065f46"
+          src='https://cdn.lordicon.com/jnikqyih.json'
+          trigger='loop'
+          delay='2000'
+          colors='primary:#10b981,secondary:#065f46'
           style={{ width: '64px', height: '64px', margin: '0 auto 16px' }}
         />
-        <h2 className="text-3xl font-bold text-slate-800 dark:text-slate-200 mb-2">
+        <h2 className='mb-2 text-3xl font-bold text-slate-800 dark:text-slate-200'>
           Ready to Order?
         </h2>
-        <p className="text-slate-600 dark:text-slate-400">
+        <p className='text-slate-600 dark:text-slate-400'>
           Let's get your delicious pizzas delivered!
         </p>
       </div>
 
       {/* Form */}
-      <div className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm rounded-2xl border border-emerald-200/50 dark:border-emerald-800/50 shadow-lg shadow-emerald-500/10 p-8">
-        <Form method="POST" className="space-y-6">
+      <div className='rounded-2xl border border-emerald-200/50 bg-white/70 p-8 shadow-lg shadow-emerald-500/10 backdrop-blur-sm dark:border-emerald-800/50 dark:bg-slate-800/70'>
+        <Form method='POST' className='space-y-6'>
           {/* Name Field */}
-          <div className="space-y-2">
-            <label className="flex items-center space-x-2 text-sm font-semibold text-slate-700 dark:text-slate-300">
+          <div className='space-y-2'>
+            <label className='flex items-center space-x-2 text-sm font-semibold text-slate-700 dark:text-slate-300'>
               <lord-icon
-                src="https://cdn.lordicon.com/hrjifpbq.json"
-                trigger="hover"
-                colors="primary:#10b981,secondary:#065f46"
+                src='https://cdn.lordicon.com/hrjifpbq.json'
+                trigger='hover'
+                colors='primary:#10b981,secondary:#065f46'
                 style={{ width: '20px', height: '20px' }}
               />
               <span>Full Name</span>
             </label>
             <input
-              type="text"
-              name="customer"
+              type='text'
+              name='customer'
               defaultValue={username}
               required
-              className="w-full px-4 py-3 rounded-xl border border-emerald-200 dark:border-emerald-800 bg-white/50 dark:bg-slate-800/50 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all duration-200"
+              className='w-full rounded-xl border border-emerald-200 bg-white/50 px-4 py-3 transition-all duration-200 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-emerald-800 dark:bg-slate-800/50'
             />
           </div>
 
           {/* Phone Field */}
-          <div className="space-y-2">
-            <label className="flex items-center space-x-2 text-sm font-semibold text-slate-700 dark:text-slate-300">
+          <div className='space-y-2'>
+            <label className='flex items-center space-x-2 text-sm font-semibold text-slate-700 dark:text-slate-300'>
               <lord-icon
-                src="https://cdn.lordicon.com/srsgifqc.json"
-                trigger="hover"
-                colors="primary:#10b981,secondary:#065f46"
+                src='https://cdn.lordicon.com/srsgifqc.json'
+                trigger='hover'
+                colors='primary:#10b981,secondary:#065f46'
                 style={{ width: '20px', height: '20px' }}
               />
               <span>Phone Number</span>
             </label>
             <input
-              type="tel"
-              name="phone"
+              type='tel'
+              name='phone'
               required
-              className="w-full px-4 py-3 rounded-xl border border-emerald-200 dark:border-emerald-800 bg-white/50 dark:bg-slate-800/50 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all duration-200"
+              className='w-full rounded-xl border border-emerald-200 bg-white/50 px-4 py-3 transition-all duration-200 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 dark:border-emerald-800 dark:bg-slate-800/50'
             />
             {formErrors?.phone && (
-              <p className="text-red-500 text-sm flex items-center space-x-1">
+              <p className='flex items-center space-x-1 text-sm text-red-500'>
                 <lord-icon
-                  src="https://cdn.lordicon.com/akqsdstj.json"
-                  trigger="hover"
-                  colors="primary:#ef4444,secondary:#ef4444"
+                  src='https://cdn.lordicon.com/akqsdstj.json'
+                  trigger='hover'
+                  colors='primary:#ef4444,secondary:#ef4444'
                   style={{ width: '16px', height: '16px' }}
                 />
                 <span>{formErrors.phone}</span>
@@ -106,30 +108,30 @@ function CreateOrder() {
           </div>
 
           {/* Address Field */}
-          <div className="space-y-2">
-            <label className="flex items-center space-x-2 text-sm font-semibold text-slate-700 dark:text-slate-300">
+          <div className='space-y-2'>
+            <label className='flex items-center space-x-2 text-sm font-semibold text-slate-700 dark:text-slate-300'>
               <lord-icon
-                src="https://cdn.lordicon.com/surcxhka.json"
-                trigger="hover"
-                colors="primary:#10b981,secondary:#065f46"
+                src='https://cdn.lordicon.com/surcxhka.json'
+                trigger='hover'
+                colors='primary:#10b981,secondary:#065f46'
                 style={{ width: '20px', height: '20px' }}
               />
               <span>Address</span>
             </label>
-            <div className="relative">
+            <div className='relative'>
               <input
-                type="text"
-                name="address"
+                type='text'
+                name='address'
                 disabled={isLoadingAddress}
                 defaultValue={address}
                 required
-                className="w-full px-4 py-3 pr-32 rounded-xl border border-emerald-200 dark:border-emerald-800 bg-white/50 dark:bg-slate-800/50 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all duration-200 disabled:opacity-50"
+                className='w-full rounded-xl border border-emerald-200 bg-white/50 px-4 py-3 pr-32 transition-all duration-200 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 disabled:opacity-50 dark:border-emerald-800 dark:bg-slate-800/50'
               />
               {!position.latitude && !position.longitude && (
-                <span className="absolute right-2 top-1/2 transform -translate-y-1/2">
+                <span className='absolute right-2 top-1/2 -translate-y-1/2 transform'>
                   <Button
                     disabled={isLoadingAddress}
-                    type="small"
+                    type='small'
                     onClick={(e) => {
                       e.preventDefault();
                       dispatch(fetchAddress());
@@ -137,18 +139,22 @@ function CreateOrder() {
                   >
                     {isLoadingAddress ? (
                       <lord-icon
-                        src="https://cdn.lordicon.com/xjovhxra.json"
-                        trigger="loop"
-                        colors="primary:#ffffff,secondary:#ffffff"
+                        src='https://cdn.lordicon.com/xjovhxra.json'
+                        trigger='loop'
+                        colors='primary:#ffffff,secondary:#ffffff'
                         style={{ width: '16px', height: '16px' }}
                       />
                     ) : (
                       <>
                         <lord-icon
-                          src="https://cdn.lordicon.com/surcxhka.json"
-                          trigger="hover"
-                          colors="primary:#ffffff,secondary:#ffffff"
-                          style={{ width: '16px', height: '16px', marginRight: '4px' }}
+                          src='https://cdn.lordicon.com/surcxhka.json'
+                          trigger='hover'
+                          colors='primary:#ffffff,secondary:#ffffff'
+                          style={{
+                            width: '16px',
+                            height: '16px',
+                            marginRight: '4px',
+                          }}
                         />
                         Get Position
                       </>
@@ -158,11 +164,11 @@ function CreateOrder() {
               )}
             </div>
             {addressStatus === 'error' && (
-              <p className="text-red-500 text-sm flex items-center space-x-1">
+              <p className='flex items-center space-x-1 text-sm text-red-500'>
                 <lord-icon
-                  src="https://cdn.lordicon.com/akqsdstj.json"
-                  trigger="hover"
-                  colors="primary:#ef4444,secondary:#ef4444"
+                  src='https://cdn.lordicon.com/akqsdstj.json'
+                  trigger='hover'
+                  colors='primary:#ef4444,secondary:#ef4444'
                   style={{ width: '16px', height: '16px' }}
                 />
                 <span>{errorAddress}</span>
@@ -171,20 +177,23 @@ function CreateOrder() {
           </div>
 
           {/* Priority Checkbox */}
-          <div className="flex items-center space-x-3 p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl border border-emerald-200/50 dark:border-emerald-800/50">
+          <div className='flex items-center space-x-3 rounded-xl border border-emerald-200/50 bg-emerald-50 p-4 dark:border-emerald-800/50 dark:bg-emerald-900/20'>
             <input
-              type="checkbox"
-              name="priority"
-              id="priority"
+              type='checkbox'
+              name='priority'
+              id='priority'
               value={withPriority}
               onChange={(e) => setWithPriority(e.target.checked)}
-              className="w-5 h-5 text-emerald-600 bg-white border-emerald-300 rounded focus:ring-emerald-500 focus:ring-2"
+              className='h-5 w-5 rounded border-emerald-300 bg-white text-emerald-600 focus:ring-2 focus:ring-emerald-500'
             />
-            <label htmlFor="priority" className="flex items-center space-x-2 text-sm font-medium text-slate-700 dark:text-slate-300 cursor-pointer">
+            <label
+              htmlFor='priority'
+              className='flex cursor-pointer items-center space-x-2 text-sm font-medium text-slate-700 dark:text-slate-300'
+            >
               <lord-icon
-                src="https://cdn.lordicon.com/yqzmiobz.json"
-                trigger="hover"
-                colors="primary:#10b981,secondary:#065f46"
+                src='https://cdn.lordicon.com/yqzmiobz.json'
+                trigger='hover'
+                colors='primary:#10b981,secondary:#065f46'
                 style={{ width: '20px', height: '20px' }}
               />
               <span>Want to give your order priority?</span>
@@ -192,10 +201,10 @@ function CreateOrder() {
           </div>
 
           {/* Hidden Inputs */}
-          <input type="hidden" name="cart" value={JSON.stringify(cart)} />
+          <input type='hidden' name='cart' value={JSON.stringify(cart)} />
           <input
-            type="hidden"
-            name="position"
+            type='hidden'
+            name='position'
             value={
               position.longitude && position.latitude
                 ? `${position.latitude},${position.longitude}`
@@ -204,33 +213,43 @@ function CreateOrder() {
           />
 
           {/* Order Summary */}
-          <div className="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-6 space-y-3">
-            <div className="flex justify-between items-center">
-              <span className="text-slate-600 dark:text-slate-400">Subtotal:</span>
-              <span className="font-semibold">{formatCurrency(totalCartPrice)}</span>
+          <div className='space-y-3 rounded-xl bg-slate-50 p-6 dark:bg-slate-900/50'>
+            <div className='flex items-center justify-between'>
+              <span className='text-slate-600 dark:text-slate-400'>
+                Subtotal:
+              </span>
+              <span className='font-semibold'>
+                {formatCurrency(totalCartPrice)}
+              </span>
             </div>
             {withPriority && (
-              <div className="flex justify-between items-center">
-                <span className="text-slate-600 dark:text-slate-400">Priority fee:</span>
-                <span className="font-semibold">{formatCurrency(priorityPrice)}</span>
+              <div className='flex items-center justify-between'>
+                <span className='text-slate-600 dark:text-slate-400'>
+                  Priority fee:
+                </span>
+                <span className='font-semibold'>
+                  {formatCurrency(priorityPrice)}
+                </span>
               </div>
             )}
-            <div className="flex justify-between items-center pt-3 border-t border-slate-200 dark:border-slate-700">
-              <span className="text-lg font-bold text-slate-800 dark:text-slate-200">Total:</span>
-              <span className="text-lg font-bold text-emerald-600 dark:text-emerald-400">
+            <div className='flex items-center justify-between border-t border-slate-200 pt-3 dark:border-slate-700'>
+              <span className='text-lg font-bold text-slate-800 dark:text-slate-200'>
+                Total:
+              </span>
+              <span className='text-lg font-bold text-emerald-600 dark:text-emerald-400'>
                 {formatCurrency(totalPrice)}
               </span>
             </div>
           </div>
 
           {/* Submit Button */}
-          <Button disabled={isSubmitting || isLoadingAddress} type="primary">
+          <Button disabled={isSubmitting || isLoadingAddress} type='primary'>
             {isSubmitting ? (
               <>
                 <lord-icon
-                  src="https://cdn.lordicon.com/xjovhxra.json"
-                  trigger="loop"
-                  colors="primary:#ffffff,secondary:#ffffff"
+                  src='https://cdn.lordicon.com/xjovhxra.json'
+                  trigger='loop'
+                  colors='primary:#ffffff,secondary:#ffffff'
                   style={{ width: '20px', height: '20px', marginRight: '8px' }}
                 />
                 Placing Order...
@@ -238,9 +257,9 @@ function CreateOrder() {
             ) : (
               <>
                 <lord-icon
-                  src="https://cdn.lordicon.com/jnikqyih.json"
-                  trigger="hover"
-                  colors="primary:#ffffff,secondary:#ffffff"
+                  src='https://cdn.lordicon.com/jnikqyih.json'
+                  trigger='hover'
+                  colors='primary:#ffffff,secondary:#ffffff'
                   style={{ width: '20px', height: '20px', marginRight: '8px' }}
                 />
                 Order Now for {formatCurrency(totalPrice)}
@@ -265,7 +284,8 @@ export async function action({ request }) {
 
   const errors = {};
   if (!isValidPhone(order.phone))
-    errors.phone = 'Please give us your correct phone number. We might need it to contact you.';
+    errors.phone =
+      'Please give us your correct phone number. We might need it to contact you.';
 
   if (Object.keys(errors).length > 0) return errors;
 

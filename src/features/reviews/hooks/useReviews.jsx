@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { calculateStats, loadMoreReviews, toggleForm } from '../reviewSlice';
 
-
 export const useReviews = () => {
   const dispatch = useDispatch();
   const reviewsState = useSelector((state) => state.reviews);
@@ -22,6 +21,6 @@ export const useReviews = () => {
   return {
     ...reviewsState,
     handleToggleForm,
-    handleLoadMore
+    handleLoadMore,
   };
 };

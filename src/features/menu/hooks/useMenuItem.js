@@ -4,7 +4,7 @@ import { addItem, getCurrentQuantityById } from '../../cart/cartSlice';
 export const useMenuItem = (pizza) => {
   const dispatch = useDispatch();
   const { id, name, unitPrice } = pizza;
-  
+
   const currentQuantity = useSelector(getCurrentQuantityById(id));
   const isInCart = currentQuantity > 0;
 
