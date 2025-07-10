@@ -30,7 +30,7 @@ const UpdateItemQuantity = memo(({ pizzaId, currentQuantity }) => {
       <QuantityButton
         type='increase'
         onClick={handleIncrease}
-        iconSrc='https://cdn.lordicon.com/jqeuwnmb.json'
+        iconSrc='https://cdn.lordicon.com/mecwbjnp.json'
         ariaLabel='Increase quantity'
       />
     </div>
