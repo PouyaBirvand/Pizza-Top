@@ -43,7 +43,7 @@ export const ABOUT_DATA = {
     {
       id: 'fast-delivery',
       icon: {
-        src: 'https://cdn.lordicon.com/abvsilkn.json',
+        src: 'https://cdn.lordicon.com/rmkahxvq.json',
         trigger: 'hover',
         colors: 'primary:#10b981,secondary:#065f46',
         size: { width: '48px', height: '48px' },
