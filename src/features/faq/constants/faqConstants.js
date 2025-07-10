@@ -7,7 +7,7 @@ export const FAQ_CATEGORIES = [
   {
     id: 'delivery',
     name: 'Delivery',
-    icon: 'https://cdn.lordicon.com/abvsilkn.json',
+    icon: 'https://cdn.lordicon.com/rmkahxvq.json',
   },
   { id: 'menu', name: 'Menu', icon: 'https://cdn.lordicon.com/wloilxuq.json' },
   {
