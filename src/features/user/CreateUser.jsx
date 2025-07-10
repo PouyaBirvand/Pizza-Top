@@ -27,7 +27,7 @@ function CreateUser() {
           style={{ width: '64px', height: '64px', margin: '0 auto 16px' }}
         />
         <p className='mb-2 text-lg text-slate-600 dark:text-slate-300'>
-          👋 Welcome to Pizza Top
+          Welcome to Pizza Top
         </p>
         <p className='text-sm text-slate-500 dark:text-slate-400'>
           Please tell us your name to get started
