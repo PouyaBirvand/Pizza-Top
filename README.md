@@ -101,7 +101,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/pizza-top.git
+   git clone https://github.com/PouyaBirvand/Pizza-Top.git
    cd pizza-top
    ```
 
